@@ -29,6 +29,14 @@ Sistem Konsultasi Psikolog ini memiliki tiga class utama, masing-masing diletakk
 <img width="282" height="376" alt="image" src="https://github.com/user-attachments/assets/1058a8a7-d1a0-47ce-8cbb-ddb8600e05bd" />
 
 
+<img width="1154" height="551" alt="image" src="https://github.com/user-attachments/assets/34cd32cd-c655-4919-9d91-51923dbdbc3b" />
+
+
+<img width="1131" height="518" alt="image" src="https://github.com/user-attachments/assets/d5180a96-a53e-4b70-93cd-fccdb6050b0e" />
+
+
+
+
 
 # Inheritance
 <img width="372" height="139" alt="image" src="https://github.com/user-attachments/assets/864f91f4-7a2b-429d-838b-8965dc052de7" />
