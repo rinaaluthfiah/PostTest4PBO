@@ -28,14 +28,21 @@ Sistem Konsultasi Psikolog ini memiliki tiga class utama, masing-masing diletakk
 
 <img width="282" height="376" alt="image" src="https://github.com/user-attachments/assets/1058a8a7-d1a0-47ce-8cbb-ddb8600e05bd" />
 
+<img width="664" height="419" alt="image" src="https://github.com/user-attachments/assets/7e58d60d-94e4-4b1b-86b1-f3a326ad9e2b" />
 
-<img width="1154" height="551" alt="image" src="https://github.com/user-attachments/assets/34cd32cd-c655-4919-9d91-51923dbdbc3b" />
-
-
-<img width="1131" height="518" alt="image" src="https://github.com/user-attachments/assets/d5180a96-a53e-4b70-93cd-fccdb6050b0e" />
+Class Orang adalah class abstrak yang berisi atribut umum seperti nama dan umur. Class ini tidak bisa dibuat objek langsung, tapi menjadi dasar untuk class lain seperti Pasien dan Psikolog. Ada juga method abstrak info() yang harus diisi ulang oleh class turunannya. Abstraction ini dipakai supaya hal-hal umum ditaruh di satu tempat, sedangkan detailnya disesuaikan di class turunan.
 
 
+# Interface
 
+<img width="656" height="233" alt="image" src="https://github.com/user-attachments/assets/ca37eec0-9ab9-4796-bc2e-01daeb8ba135" />
+
+
+AturJadwal adalah interface yang berisi aturan untuk mengatur dan mengambil jadwal. Interface hanya berisi nama method, tanpa isi. Class yang memakai interface ini wajib mengisi method sesuai kebutuhannya. Dengan cara ini, semua class yang berbeda bisa punya aturan yang sama.
+
+# Hubungan Abstraction dan Interface
+
+Abstraction dipakai untuk membuat dasar umum (misalnya class Orang), sedangkan interface dipakai untuk aturan khusus (misalnya atur jadwal konsultasi). Keduanya membuat program lebih rapi, mudah diatur, dan jelas fungsinya.
 
 
 # Inheritance
@@ -67,7 +74,21 @@ Package Main berisi class Main sebagai pusat jalannya program dan tempat interak
 
 2. Penerapan Override pada subclass Psikolog
    
-Pada class Pasien dan Psikolog, method info() menggunakan Override untuk menambahkan data khusus masing-masing, seperti keluhan pada Pasien dan spesialis untuk Psikolog. Dengan override, subclass bisa menampilkan informasi tambahan sesuai kebutuhan, tapi tetap memakai data dasar dari superclass Orang.
+
+<img width="1102" height="455" alt="image" src="https://github.com/user-attachments/assets/83338da5-4f23-4473-9f4c-ffeec6c5ac45" />
+
+3. Penerapan Override pada class Konsultasi
+
+
+   
+Pada class Pasien dan Psikolog, method info() menggunakan Override untuk menambahkan data khusus masing-masing, seperti keluhan pada Pasien dan spesialis untuk Psikolog. Dengan override, subclass bisa menampilkan informasi tambahan sesuai kebutuhan, tapi tetap memakai data dasar dari superclass Orang. Disini juga terjadi penambahan override pada class konsultasi.
+
+# Overloading
+
+<img width="809" height="289" alt="image" src="https://github.com/user-attachments/assets/6a14278c-824b-49bf-89e5-fa6eb81253ef" />
+
+konsep overloading disini, yaitu Method searchData() dipakai untuk menerima input pencarian, lalu otomatis menyesuaikan  input berupa angka (ID pasien). Jika data cocok, informasi pasien ditampilkan, jika tidak muncul pesan “data tidak ditemukan”. Dengan overloading, program jadi lebih fleksibel dan mudah digunakan.
+
 
 
 
@@ -100,16 +121,24 @@ Pengguna diminta untuk menginputkan ulang dengan benar, setelah itu akan masuk k
 ## 1. Tambah Data Konsultasi 
 
 📝 Data 1
-<img width="554" height="365" alt="image" src="https://github.com/user-attachments/assets/562f9e16-afea-4423-8070-6cc9387260fe" />
+<img width="696" height="367" alt="image" src="https://github.com/user-attachments/assets/221c9659-903e-4ed8-9c7a-7403894d0444" />
+
+
+
 
 
 
 📝 Data 2
-<img width="721" height="373" alt="image" src="https://github.com/user-attachments/assets/05c05a2e-1ec1-4b4d-a98e-599c2505d5fa" />
+<img width="729" height="379" alt="image" src="https://github.com/user-attachments/assets/69dcbd2d-445d-46d0-9db6-2dcf0bf1aef4" />
+
+
 
 
 📝Data 3
-<img width="752" height="359" alt="image" src="https://github.com/user-attachments/assets/b22f9991-0c7d-44db-b1ad-9cf14fef71c5" />
+<img width="740" height="403" alt="image" src="https://github.com/user-attachments/assets/54f5a7b0-91e1-4e3a-8eb0-b77870280cdf" />
+
+
+
 
 
 
@@ -117,14 +146,19 @@ Setelah memilih menu Tambah Data Konsultasi(menu 1), pengguna memasukkan data pa
 
 
 ## 2. Tampilkan Data Konsultasi 
-<img width="457" height="188" alt="image" src="https://github.com/user-attachments/assets/f8882d1a-a22b-4bf6-b82b-32de33c8e690" />
+<img width="703" height="192" alt="image" src="https://github.com/user-attachments/assets/e62de00a-4e59-4301-9190-04cbd5d91880" />
+
+
+
 
 
 Disini pengguna menginput angka 2, maka akan menampilkan  seluruh data konsultasi yang ada dalam sistem. 
 
 
 
-<img width="596" height="798" alt="image" src="https://github.com/user-attachments/assets/8027d86f-ff63-417d-9bb2-18c09576ee2d" />
+<img width="726" height="631" alt="image" src="https://github.com/user-attachments/assets/5aa72326-4c01-48c3-a909-866a4f232906" />
+
+
 
 
 
@@ -132,7 +166,8 @@ Pada menu Tampilkan Data Konsultasi, program menampilkan semua data yang tersimp
 
 
 ## 3. Perbarui Data Konsultasi
-<img width="519" height="255" alt="image" src="https://github.com/user-attachments/assets/6ddafa5b-6412-4418-904d-ca51188910c3" />
+<img width="692" height="260" alt="image" src="https://github.com/user-attachments/assets/ce883b9f-32f2-43b4-acdb-25736d535d93" />
+
 
 
 
@@ -142,13 +177,15 @@ Pada menu Perbarui Data Konsultasi, data dengan ID 3 milik pasien Dewi Lestari d
 
 Sebelum Data  ke-3  diperbarui:
 
-<img width="496" height="211" alt="image" src="https://github.com/user-attachments/assets/e1ed6100-cfde-42df-b0c2-1d1c34cc9d18" />
+<img width="516" height="214" alt="image" src="https://github.com/user-attachments/assets/c99fd800-6b59-4971-8cc0-a86390a21536" />
+
 
 
 
 Setelah Data ke-3 diperbarui:
 
-<img width="492" height="216" alt="image" src="https://github.com/user-attachments/assets/cf133d9f-9acc-421c-beb8-810d998b7f09" />
+<img width="529" height="232" alt="image" src="https://github.com/user-attachments/assets/d8a47857-60ff-4583-94ea-063b32dd1d20" />
+
 
 
 
@@ -156,34 +193,32 @@ Setelah Data ke-3 diperbarui:
 
 
 ## 4. Hapus Data Konsultasi 
-<img width="608" height="237" alt="image" src="https://github.com/user-attachments/assets/f3b4ed43-faaf-449c-bb25-790a5e64e47a" />
+<img width="477" height="233" alt="image" src="https://github.com/user-attachments/assets/b9eaad80-117b-402f-82b8-60829be1a5ef" />
 
 
 
-Disini pengguna memilih menu program hapus data konsultasi (menu 4). Setelah memasukkan ID 3,  program akan menghapus data konsultasi pada urutan tersebut dari sistem. Setelah proses selesai, program menampilkan pesan konfirmasi bahwa data nomor 3 berhasil dihapus.
+
+Disini pengguna memilih menu program hapus data konsultasi (menu 4). Setelah memasukkan ID 2,  program akan menghapus data konsultasi pada urutan tersebut dari sistem. Setelah proses selesai, program menampilkan pesan konfirmasi bahwa data nomor 2 berhasil dihapus.
 
 
-<img width="575" height="601" alt="image" src="https://github.com/user-attachments/assets/aa865048-2d47-4a25-a1c7-ec1172719484" />
+<img width="656" height="588" alt="image" src="https://github.com/user-attachments/assets/6a25bb39-0ca5-48a3-a1ee-d2cb36d98ae2" />
 
 
 
-Pengguna ingin memastikan data benar terhapus atau tidak. Dan pada tampilan diatas data dengan ID 3  berhasil dihapus dari sistem.
+
+Pengguna ingin memastikan data benar terhapus atau tidak. Dan pada tampilan diatas data dengan ID 2  berhasil dihapus dari sistem.
 
 
 ## 5. Cari Data Konsultasi 
 
-<img width="561" height="246" alt="image" src="https://github.com/user-attachments/assets/bc23b755-869f-4d7a-aeb1-9bb7554e6d24" />
-
-Pengguna memilih Cari Data Konsultasi (menu 5 ). Kemudian pengguna memasukkan nama pasien "Inar". Setelah sistem melakukan pencarian, tidak ada data pasien dengan nama tersebut yang tersimpan. Karena itu, program menampilkan pesan "Data tidak ditemukan".
+<img width="655" height="399" alt="image" src="https://github.com/user-attachments/assets/78fa0095-2d8e-41e2-bc6f-191c4e4e93e4" />
 
 
-<img width="608" height="403" alt="image" src="https://github.com/user-attachments/assets/18e2072f-feb1-45c8-8de5-ea6af8f58d0c" />
 
-
-Disini sistem terdapat fitur cari data pasien. Pada tampilan diatas pengguna ingin mencari data pasien yang bernama Danie tetapi pengguna hanya menginputkan Dan,maka otomatis hanya data dengan nama Danie yang akan ditampilkan. Proses pencarian data menjadi lebih cepat dan mudah.
+Didalam sistem konsultasi psikolog  terdapat fitur cari data pasien. Pada tampilan diatas pengguna ingin mencari data pasien dengan ID 2 ,maka otomatis hanya data dengan ID 2 dengan nama Siti Rahma yang akan ditampilkan. Proses pencarian data menjadi lebih cepat dan mudah dengan ID.
 
 ## 6. Keluar
-<img width="770" height="340" alt="image" src="https://github.com/user-attachments/assets/e0e91fef-6efd-4dca-ac2e-f8630f05cd68" />
+<img width="673" height="346" alt="image" src="https://github.com/user-attachments/assets/6c7f3be0-9ba0-4407-88a9-3a4fea94f06e" />
 
 
 
